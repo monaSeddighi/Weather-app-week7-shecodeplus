@@ -15,3 +15,15 @@ h1{
     font-weight: 100;
     line-height: 28px;
 }
+ul{
+    padding: 0;
+    margin:0;
+}
+li{
+   list-style:none;
+   color: rgb(135, 135, 135);
+   font-size: 16px;
+   font-weight:100;
+   line-height: 19px;
+
+}
