@@ -20,6 +20,8 @@ li{
    line-height: 19px;
     padding: 0;
         margin: 0;
+}
+li:first-letter{
         text-transform: capitalize;
 }
 small{
