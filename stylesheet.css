@@ -34,6 +34,7 @@ padding: 20px;
     border-radius: 5px;
         max-width: 600px;
             margin: 30px auto;
+            margin-bottom: 0;
 }
 
 .overview {
@@ -56,3 +57,12 @@ position:relative;
 font-size: 16px;
 top:-34px;
 }
+.my-code-line{
+    margin-left: 250px;
+    font-size: smaller;
+    margin-top: 0;
+        padding-top: 0;
+}
+    .my-name{
+      color: #575757;
+    }  

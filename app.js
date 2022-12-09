@@ -29,6 +29,7 @@ let weatherdescriptioElement=document.querySelector("#description");
 weatherdescriptioElement.innerHTML=response.data.weather[0].description;
 }
 let apiKey="5b74d10f3ef03caf1ac640b557c288c3";
-let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
+let city="New York";
+let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature)
