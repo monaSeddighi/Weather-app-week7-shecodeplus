@@ -17,17 +17,28 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app-wrapper"> 
+      <div class="weather-app-wrapper">
         <div class="weather-app">
-          
-            <form id="search-form" class="mb-3">
-              <div class="row">
-                <div class="col-9">
-            <input type="search" placeholder="Type a city.." class="form-control" id="city-input" autocomplete="off"></div>
-            <div class="col-3">
-            <input type="submit" value="Search" class="btn btn-success w-100">
-          </div></div>
-          </form>  
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-success w-100"
+                />
+              </div>
+            </div>
+          </form>
           <div class="overview">
             <h1 id="city"></h1>
             <ul>
@@ -37,11 +48,7 @@
           </div>
           <div class="row">
             <div class="col-6 d-flex weather-temperature">
-              <img
-                src=""
-                alt=""
-                id="icon"
-              />
+              <img src="" alt="" id="icon" />
               <div>
                 <span>
                   <strong id="temperature">13</strong
@@ -62,8 +69,9 @@
           <a
             href="https://github.com/monaSeddighi/Weather-app-week7-shecodeplus"
             target="_blank"
-            >Open-source code</a><span class="my-name">, Mona Seddighi</span>  </span
-        >
+            >Open-source code</a
+          ><span class="my-name">, Mona Seddighi</span>
+        </span>
       </div>
     </div>
     <script src="app.js"></script>
