@@ -32,7 +32,7 @@ iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.dat
 iconElement.setAttribute("alt", `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`);
 }
 let apiKey="5b74d10f3ef03caf1ac640b557c288c3";
-let city="barcelona";
+let city="New York";
 let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature)
