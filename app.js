@@ -14,7 +14,8 @@ return `${day} ${hours}:${minutes}`
 }
 
 
-function displayTemperature(response){     let temperatureElement=document.querySelector("#temperature")
+function displayTemperature(response){     
+let temperatureElement=document.querySelector("#temperature")
 temperatureElement.innerHTML=Math.round(response.data.main.temp);
 let humidityElement=document.querySelector("#humidity")
 humidityElement.innerHTML=Math.round(response.data.main.humidity);
