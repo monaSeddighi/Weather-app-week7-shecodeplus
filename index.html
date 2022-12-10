@@ -17,10 +17,18 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app-wrapper">
+      <div class="weather-app-wrapper"> 
         <div class="weather-app">
+          
+            <form id="search-form" >
+              <div class="row">
+                <div class="col-9">
+            <input type="search" placeholder="Type a city.." class="form-control"></div>
+            <div class="col-3">
+            <input type="submit" value="Search" class="btn btn-success">
+          </div></div>
+          </form>  
           <div class="overview">
-            <input type="text">
             <h1 id="city"></h1>
             <ul>
               <li>Last Updated: <span id="date"></span></li>
