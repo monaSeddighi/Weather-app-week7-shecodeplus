@@ -16,18 +16,21 @@ return `${day} ${hours}:${minutes}`
 
 function displayTemperature(response){     
 let temperatureElement=document.querySelector("#temperature")
-temperatureElement.innerHTML=Math.round(response.data.main.temp);
 let humidityElement=document.querySelector("#humidity")
-humidityElement.innerHTML=Math.round(response.data.main.humidity);
 let windElement=document.querySelector("#wind")
-windElement.innerHTML=Math.round(response.data.wind.speed);
 let dateElement=document.querySelector("#date")
-dateElement.innerHTML=formatDate(response.data.dt * 1000);
 let cityElement=document.querySelector("#city");
-cityElement.innerHTML=response.data.name;
 let weatherdescriptioElement=document.querySelector("#description");
-weatherdescriptioElement.innerHTML=response.data.weather[0].description;
 let iconElement=document.querySelector("#icon");
+
+celsiusTemperature=response.data.main.temp;
+
+temperatureElement.innerHTML=Math.round(response.data.main.temp);
+humidityElement.innerHTML=Math.round(response.data.main.humidity);
+windElement.innerHTML=Math.round(response.data.wind.speed);
+dateElement.innerHTML=formatDate(response.data.dt * 1000);
+cityElement.innerHTML=response.data.name;
+weatherdescriptioElement.innerHTML=response.data.weather[0].description;
 iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt", `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`);
 }
@@ -43,7 +46,22 @@ let cityInputElement = document.querySelector("#city-input");
 search(cityInputElement.value);
 }
 
-search("New York");
+
+
+function displayFahrenheitTemperature(event){
+event.preventDefault();
+let fahrenheitTemperature=(temperatureElement.innerHTML * 9/5) + 32;
+let temperatureElement=document.querySelector("#temperature");
+temperatureElement.innerHTML=Math.round(fahrenheitTemperature);
+}
+
+let celsiusTemperature=null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit); 
+
+
+let fahrenheitLink=document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+search("New York");
